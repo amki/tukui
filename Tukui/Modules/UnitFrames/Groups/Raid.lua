@@ -213,6 +213,26 @@ function TukuiUnitFrames:Raid()
 
 		self.RaidDebuffs = RaidDebuffs
 	end
+	
+	local Debuffs = CreateFrame("Frame", self:GetName()..'Debuffs', self)
+	
+	Debuffs:SetHeight(22)
+	Debuffs:SetWidth(80)
+	Debuffs:SetPoint("TOPLEFT", Power, "BOTTOMLEFT", 0, -2)
+	Debuffs.size = 20
+	Debuffs.num = 5
+	Debuffs.numRow = 1
+
+	Debuffs.spacing = 2
+	Debuffs.initialAnchor = "TOPLEFT"
+	Debuffs["growth-y"] = "DOWN"
+	Debuffs["growth-x"] = "RIGHT"
+	Debuffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura
+	Debuffs.PostUpdateIcon = TukuiUnitFrames.PostUpdateAura
+	Debuffs.onlyShowPlayer = C.UnitFrames.OnlySelfDebuffs
+
+	self.Buffs = Buffs
+	self.Debuffs = Debuffs
 
 	if (Class == "PRIEST" and C.UnitFrames.WeakBar) then
 		-- Weakened Soul Bar
