@@ -22,14 +22,14 @@ function TukuiUnitFrames:Player()
 	Panel:SetFrameStrata(self:GetFrameStrata())
 	Panel:SetFrameLevel(2)
 	Panel:SetTemplate()
-	Panel:Size(250, 21)
+	Panel:Size(200, 21)
 	Panel:Point("BOTTOM", self, "BOTTOM", 0, 0)
 	Panel:SetBackdropBorderColor(C["General"].BorderColor[1] * 0.7, C["General"].BorderColor[2] * 0.7, C["General"].BorderColor[3] * 0.7)
 
 	local Health = CreateFrame("StatusBar", nil, self)
 	Health:SetFrameStrata(self:GetFrameStrata())
 	Health:SetFrameLevel(4)
-	Health:Height(26)
+	Health:Height(30)
 	Health:SetPoint("TOPLEFT")
 	Health:SetPoint("TOPRIGHT")
 	Health:SetStatusBarTexture(HealthTexture)
@@ -40,7 +40,7 @@ function TukuiUnitFrames:Player()
 
 	Health.Value = Health:CreateFontString(nil, "OVERLAY")
 	Health.Value:SetFontObject(Font)
-	Health.Value:Point("RIGHT", Panel, "RIGHT", -4, 0)
+	Health.Value:Point("RIGHT", Health, "RIGHT", -4, 0)
 
 	if DarkTheme then
 		Health.colorTapping = false
@@ -66,7 +66,7 @@ function TukuiUnitFrames:Player()
 	local Power = CreateFrame("StatusBar", nil, self)
 	Power:SetFrameStrata(self:GetFrameStrata())
 	Power:SetFrameLevel(4)
-	Power:Height(8)
+	Power:Height(15)
 	Power:Point("TOPLEFT", Health, "BOTTOMLEFT", 0, -1)
 	Power:Point("TOPRIGHT", Health, "BOTTOMRIGHT", 0, -1)
 	Power:SetStatusBarTexture(PowerTexture)
@@ -78,7 +78,7 @@ function TukuiUnitFrames:Player()
 
 	Power.Value = Power:CreateFontString(nil, "OVERLAY")
 	Power.Value:SetFontObject(Font)
-	Power.Value:Point("LEFT", Panel, "LEFT", 4, 0)
+	Power.Value:Point("RIGHT", Power, "RIGHT", -4, 0)
 
 	Power.frequentUpdates = true
 

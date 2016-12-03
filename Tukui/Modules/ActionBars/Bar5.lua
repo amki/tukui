@@ -22,9 +22,9 @@ function TukuiActionBars:CreateBar5()
 		Button:ClearAllPoints()
 
 		if (i == 1) then
-			Button:SetPoint("TOPRIGHT", ActionBar5, -Spacing, -Spacing)
+			Button:SetPoint("BOTTOMLEFT", ActionBar5, Spacing, Spacing)
 		else
-			Button:SetPoint("TOP", PreviousButton, "BOTTOM", 0, -Spacing)
+			Button:SetPoint("LEFT", PreviousButton, "RIGHT", Spacing, 0)
 		end
 
 		ActionBar5["Button"..i] = Button

@@ -623,8 +623,8 @@ function TukuiUnitFrames:CreateAuraWatch(frame)
 			local Icon = CreateFrame("Frame", nil, Auras)
 			Icon.spellID = spell[1]
 			Icon.anyUnit = spell[4]
-			Icon:Width(6)
-			Icon:Height(6)
+			Icon:Width(10)
+			Icon:Height(10)
 			Icon:SetPoint(spell[2], 0, 0)
 
 			local Texture = Icon:CreateTexture(nil, "OVERLAY")
@@ -734,8 +734,8 @@ function TukuiUnitFrames:GetRaidFramesAttributes()
 			self:SetWidth(header:GetAttribute("initial-width"))
 			self:SetHeight(header:GetAttribute("initial-height"))
 		]],
-		"initial-width", T.Scale(66),
-		"initial-height", T.Scale(50),
+		"initial-width", T.Scale(80),
+		"initial-height", T.Scale(45),
 		"showParty", true,
 		"showRaid", true,
 		"showPlayer", true,
@@ -748,7 +748,7 @@ function TukuiUnitFrames:GetRaidFramesAttributes()
 		"groupBy", C["Raid"].GroupBy.Value,
 		"maxColumns", math.ceil(40 / 5),
 		"unitsPerColumn", C["Raid"].MaxUnitPerColumn,
-		"columnSpacing", T.Scale(4),
+		"columnSpacing", T.Scale(10),
 		"columnAnchorPoint", "LEFT"
 end
 
@@ -866,7 +866,7 @@ end
 function TukuiUnitFrames:CreateAnchor()
 	local Anchor = CreateFrame("Frame", "TukuiActionBarAnchor", UIParent)
 	Anchor:Size(768, 66)
-	Anchor:SetPoint("BOTTOM", UIParent, 0, 14)
+	Anchor:SetPoint("CENTER", UIParent, 0, -200)
 
 	TukuiUnitFrames.Anchor = Anchor
 end
@@ -877,12 +877,12 @@ function TukuiUnitFrames:CreateUnits()
 	local Player = oUF:Spawn("player")
 	Player:SetPoint("BOTTOMLEFT", TukuiUnitFrames.Anchor, "TOPLEFT", 0, 8)
 	Player:SetParent(Panels.PetBattleHider)
-	Player:Size(250, 57)
+	Player:Size(200, 70)
 
 	local Target = oUF:Spawn("target")
 	Target:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 8)
 	Target:SetParent(Panels.PetBattleHider)
-	Target:Size(250, 57)
+	Target:Size(200, 70)
 
 	local TargetOfTarget = oUF:Spawn("targettarget")
 	TargetOfTarget:SetPoint("BOTTOM", TukuiUnitFrames.Anchor, "TOP", 0, 8)
@@ -918,9 +918,9 @@ function TukuiUnitFrames:CreateUnits()
 			Arena[i] = oUF:Spawn("arena"..i, nil)
 			Arena[i]:SetParent(Panels.PetBattleHider)
 			if (i == 1) then
-				Arena[i]:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 300)
+				Arena[i]:SetPoint("TOPLEFT", UiParent, "TOPRIGHT", -700, -14)
 			else
-				Arena[i]:SetPoint("BOTTOM", Arena[i - 1], "TOP", 0, 35)
+				Arena[i]:SetPoint("TOP", Arena[i-1], "BOTTOM", 0, -35)
 			end
 			Arena[i]:Size(200, 29)
 
@@ -939,9 +939,9 @@ function TukuiUnitFrames:CreateUnits()
 			Boss[i] = oUF:Spawn("boss"..i, nil)
 			Boss[i]:SetParent(Panels.PetBattleHider)
 			if (i == 1) then
-				Boss[i]:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 300)
+				Boss[i]:SetPoint("TOPLEFT", UiParent, "TOPRIGHT", -700, -14)
 			else
-				Boss[i]:SetPoint("BOTTOM", Boss[i - 1], "TOP", 0, 35)
+				Boss[i]:SetPoint("TOP", Boss[i-1], "BOTTOM", 0, -35)
 			end
 			Boss[i]:Size(200, 29)
 
@@ -966,7 +966,7 @@ function TukuiUnitFrames:CreateUnits()
 	if C.Raid.Enable then
 		local Raid = oUF:SpawnHeader(TukuiUnitFrames:GetRaidFramesAttributes())
 		Raid:SetParent(Panels.PetBattleHider)
-		Raid:Point("TOPLEFT", UIParent, "TOPLEFT", 30, -30)
+		Raid:Point("TOPLEFT", UIParent, "TOPRIGHT", -750, -300)
 
 		if C.Raid.ShowPets then
 			local Pet = oUF:SpawnHeader(TukuiUnitFrames:GetPetRaidFramesAttributes())

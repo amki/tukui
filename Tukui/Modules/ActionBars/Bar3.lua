@@ -23,8 +23,8 @@ function TukuiActionBars:CreateBar3()
 
 		if (i == 1) then
 			Button:SetPoint("BOTTOMLEFT", ActionBar3, Spacing, Spacing)
-		elseif (i == 7) then
-			Button:SetPoint("TOPLEFT", ActionBar3, Spacing, -Spacing)
+		--elseif (i == 7) then
+		--	Button:SetPoint("TOPLEFT", ActionBar3, Spacing, -Spacing)
 		else
 			Button:SetPoint("LEFT", PreviousButton, "RIGHT", Spacing, 0)
 		end
