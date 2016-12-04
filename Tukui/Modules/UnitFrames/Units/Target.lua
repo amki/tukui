@@ -268,15 +268,15 @@ function TukuiUnitFrames:Target()
 
 		Buffs:SetHeight(26)
 		Buffs:SetWidth(252)
-		Buffs.size = 25
+		Buffs.size = 26
 		Buffs.num = 36
 		Buffs.numRow = 9
 
 		Buffs:SetFrameStrata(self:GetFrameStrata())
 		Debuffs:SetHeight(26)
 		Debuffs:SetWidth(252)
-		Debuffs:Point("TOPLEFT", Power, "BOTTOMLEFT", 0, 10)
-		Debuffs.size = 25
+		Debuffs:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -4)
+		Debuffs.size = 26
 		Debuffs.num = 36
 		Debuffs.numRow = 9
 
@@ -284,7 +284,7 @@ function TukuiUnitFrames:Target()
 		Buffs.initialAnchor = "TOPLEFT"
 		Buffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura
 		Buffs.PostUpdateIcon = TukuiUnitFrames.PostUpdateAura
-		Buffs.PostUpdate = TukuiUnitFrames.UpdateDebuffsHeaderPosition
+		--Buffs.PostUpdate = TukuiUnitFrames.UpdateDebuffsHeaderPosition
 		Buffs.onlyShowPlayer = C.UnitFrames.OnlySelfBuffs
 
 		Debuffs.spacing = 2

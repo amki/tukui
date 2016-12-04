@@ -734,7 +734,7 @@ function TukuiUnitFrames:GetRaidFramesAttributes()
 			self:SetWidth(header:GetAttribute("initial-width"))
 			self:SetHeight(header:GetAttribute("initial-height"))
 		]],
-		"initial-width", T.Scale(80),
+		"initial-width", T.Scale(100),
 		"initial-height", T.Scale(45),
 		"showParty", true,
 		"showRaid", true,
@@ -877,7 +877,7 @@ function TukuiUnitFrames:CreateUnits()
 	local Player = oUF:Spawn("player")
 	Player:SetPoint("BOTTOMLEFT", TukuiUnitFrames.Anchor, "TOPLEFT", 0, 8)
 	Player:SetParent(Panels.PetBattleHider)
-	Player:Size(200, 70)
+	Player:Size(200, 45)
 
 	local Target = oUF:Spawn("target")
 	Target:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 8)
@@ -966,7 +966,7 @@ function TukuiUnitFrames:CreateUnits()
 	if C.Raid.Enable then
 		local Raid = oUF:SpawnHeader(TukuiUnitFrames:GetRaidFramesAttributes())
 		Raid:SetParent(Panels.PetBattleHider)
-		Raid:Point("TOPLEFT", UIParent, "TOPRIGHT", -750, -300)
+		Raid:Point("TOPLEFT", UIParent, "TOPRIGHT", -750, -250)
 
 		if C.Raid.ShowPets then
 			local Pet = oUF:SpawnHeader(TukuiUnitFrames:GetPetRaidFramesAttributes())
