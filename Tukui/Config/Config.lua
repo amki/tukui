@@ -178,7 +178,7 @@ C["UnitFrames"] = {
 	["Arena"] = true,
 	["Boss"] = true,
 	["Font"] = "Tukui UF Outline",
-	["PowerTexture"] = "Tukui",
-	["HealthTexture"] = "Tukui",
-	["CastTexture"] = "Tukui",
+	["PowerTexture"] = "Tukui UF Outline",
+	["HealthTexture"] = "Tukui UF Outline",
+	["CastTexture"] = "Tukui UF Outline",
 }

@@ -148,7 +148,7 @@ function TukuiActionBars:AddPanels()
 
 	-- Bar #5
 	local A5 = CreateFrame("Frame", "TukuiActionBar5", UIParent, "SecureHandlerStateTemplate")
-	A5:SetPoint("BOTTOM", UIParent, "BOTTOM", -650, 200)
+	A5:SetPoint("BOTTOM", UIParent, "BOTTOM", -650, 300)
 	A5:SetWidth((Size * 12) + (Spacing * 13))
 	A5:SetHeight((Size * 1) + (Spacing * 2))
 	A5:SetFrameStrata("LOW")

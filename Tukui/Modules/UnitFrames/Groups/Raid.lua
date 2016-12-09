@@ -97,7 +97,7 @@ function TukuiUnitFrames:Raid()
 	--Panel:SetTemplate()
 	--Panel:SetBackdropBorderColor(C["General"].BorderColor[1] * 0.7, C["General"].BorderColor[2] * 0.7, C["General"].BorderColor[3] * 0.7)
 
-	local Name = Health:CreateFontString(nil, "OVERLAY", 1)
+	local Name = Health:CreateFontString(nil, "ARTWORK", 1)
 	Name:SetPoint("LEFT")
 	Name:SetFontObject(Font)
 

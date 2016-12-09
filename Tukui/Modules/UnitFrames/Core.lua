@@ -368,9 +368,9 @@ function TukuiUnitFrames:PostUpdatePower(unit, min, max)
 		end
 	end
 
-	if (Parent.Name and unit == "target") then
-		TukuiUnitFrames.UpdateNamePosition(Parent)
-	end
+	--if (Parent.Name and unit == "target") then
+	--	TukuiUnitFrames.UpdateNamePosition(Parent)
+	--end
 end
 
 function TukuiUnitFrames:UpdateTotemTimer(elapsed)
@@ -882,7 +882,7 @@ function TukuiUnitFrames:CreateUnits()
 	local Target = oUF:Spawn("target")
 	Target:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 8)
 	Target:SetParent(Panels.PetBattleHider)
-	Target:Size(200, 70)
+	Target:Size(200, 45)
 
 	local TargetOfTarget = oUF:Spawn("targettarget")
 	TargetOfTarget:SetPoint("BOTTOM", TukuiUnitFrames.Anchor, "TOP", 0, 8)
