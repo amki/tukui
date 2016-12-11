@@ -18,7 +18,7 @@ TukuiUFFont:SetShadowOffset(1.25, -1.25)
 TukuiUFFont:SetFont(C["Medias"].UnitFrameFont, 16)
 
 local TukuiUFFontOutline = CreateFont("TukuiUFFontOutline")
-TukuiUFFontOutline:SetFont(C["Medias"].UnitFrameFont, 12, "THINOUTLINE")
+TukuiUFFontOutline:SetFont(C["Medias"].UnitFrameFont, 16, "THINOUTLINE")
 
 local PixelFont = CreateFont("TukuiPixelFont")
 PixelFont:SetFont(C["Medias"].PixelFont, 12, "MONOCHROMEOUTLINE")
