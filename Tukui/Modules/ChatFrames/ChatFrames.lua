@@ -243,7 +243,7 @@ function TukuiChat:SetDefaultChatFramesPositions()
 		end
 
 		if (ID == 1) then
-			FCF_SetWindowName(Frame, "G, S & W")
+			FCF_SetWindowName(Frame, "Crap")
 		end
 
 		if (ID == 2) then

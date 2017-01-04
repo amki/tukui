@@ -971,12 +971,12 @@ function TukuiUnitFrames:CreateUnits()
 		if C.Raid.ShowPets then
 			local Pet = oUF:SpawnHeader(TukuiUnitFrames:GetPetRaidFramesAttributes())
 			Pet:SetParent(Panels.PetBattleHider)
-			Pet:Point("TOPLEFT", Raid, "TOPRIGHT", 4, 0)
+			Pet:Point("TOPLEFT", Raid, "BOTTOMLEFT", 0, -12)
 
 			TukuiUnitFrames.Headers.RaidPet = Pet
 			Movers:RegisterFrame(Pet)
 		end
---[[
+
 		local MainTank = oUF:SpawnHeader(TukuiUnitFrames:MainTankAttibutes())
 		MainTank:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
 		Movers:RegisterFrame(MainTank)
@@ -984,7 +984,6 @@ function TukuiUnitFrames:CreateUnits()
 		local MainTankTarget = oUF:SpawnHeader(TukuiUnitFrames:MainTankTargetAttibutes())
 		MainTankTarget:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
 		Movers:RegisterFrame(MainTankTarget)
-]]
 		TukuiUnitFrames.Headers.Raid = Raid
 		Movers:RegisterFrame(Raid)
 	end

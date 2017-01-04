@@ -110,6 +110,10 @@ function TukuiUnitFrames:Raid()
 	--LFDRole:SetInside(Panel)
 	--LFDRole:SetColorTexture(0, 0, 0, 0)
 	--LFDRole.Override = TukuiUnitFrames.SetGridGroupRole
+	
+	local LFDRole = Health:CreateTexture(nil, "OVERLAY")
+	LFDRole:SetSize(16,16)
+	LFDRole:SetPoint("LEFT",self, -4 , 20)
 
 	local RaidIcon = Health:CreateTexture(nil, "OVERLAY")
 	RaidIcon:SetSize(16, 16)
