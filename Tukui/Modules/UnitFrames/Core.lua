@@ -976,7 +976,7 @@ function TukuiUnitFrames:CreateUnits()
 			TukuiUnitFrames.Headers.RaidPet = Pet
 			Movers:RegisterFrame(Pet)
 		end
-
+--[[
 		local MainTank = oUF:SpawnHeader(TukuiUnitFrames:MainTankAttibutes())
 		MainTank:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
 		Movers:RegisterFrame(MainTank)
@@ -986,6 +986,7 @@ function TukuiUnitFrames:CreateUnits()
 		Movers:RegisterFrame(MainTankTarget)
 		TukuiUnitFrames.Headers.Raid = Raid
 		Movers:RegisterFrame(Raid)
+		]]--
 	end
 
 	Movers:RegisterFrame(Player)
