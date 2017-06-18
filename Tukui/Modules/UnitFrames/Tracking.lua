@@ -21,7 +21,6 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 	[GetSpellInfo(206607)] = 6, -- Chronometric Particles (Tank stack debuff)
 	[GetSpellInfo(206609)] = 6, -- Time Release (Heal buff/debuff)
 	[GetSpellInfo(205653)] = 6, -- Passage of Time
-	--[GetSpellInfo(225901)] = 6, -- Time Bomb
 	[GetSpellInfo(207871)] = 6, -- Vortex (Mythic)
 	[GetSpellInfo(212099)] = 6, -- Temporal Charge
 
@@ -57,7 +56,6 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 	[GetSpellInfo(208230)] = 6, -- Feast of Blood
 	[GetSpellInfo(212794)] = 6, -- Brand of Argus
 	[GetSpellInfo(216685)] = 6, -- Flames of Argus
-	[GetSpellInfo(206311)] = 6, -- Illusionary Night
 	[GetSpellInfo(206466)] = 6, -- Essence of Night
 	[GetSpellInfo(216024)] = 6, -- Volatile Wound
 	[GetSpellInfo(216027)] = 6, -- Nether Zone
@@ -212,119 +210,12 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 	[GetSpellInfo(232450)] = 6, -- Corrupted Axion
 
 -- roi
-	
-	-- Death Knight
-	[GetSpellInfo(48707)] = 2, -- Anti-Magic Shell
-	[GetSpellInfo(55233)] = 2, -- Vampiric Blood
-	[GetSpellInfo(48792)] = 2, -- Icebound Fortitude
-	[GetSpellInfo(207319)] = 2, -- Corpse Shield
-	[GetSpellInfo(145629)] = 2, -- Anti-Magic Zone
-	-- Demon Hunter
-	[GetSpellInfo(227225)] = 2, -- Soul Barrier
-	[GetSpellInfo(209426)] = 2, -- Darkness
-	[GetSpellInfo(212800)] = 2, -- Blur
-	[GetSpellInfo(211510)] = 2, -- Solitude
-	[GetSpellInfo(205629)] = 2, -- Demonic Trample
-	-- Druid
-	[GetSpellInfo(102342)] = 2, -- Ironbark
-	[GetSpellInfo(61336)] = 2, -- Survival Instincts
-	[GetSpellInfo(210655)] = 2, -- Protection of Ashamane
-	[GetSpellInfo(22812)] = 2, -- Barkskin
-	[GetSpellInfo(29166)] = 2, -- Innervate
-	[GetSpellInfo(1850)] = 2, -- Dash
-	[GetSpellInfo(77764)] = 2, -- Stampeding Roar (Cat)
-	[GetSpellInfo(77761)] = 2, -- Stampeding Roar (Bear)
-	-- Hunter
-	[GetSpellInfo(186265)] = 2, -- Aspect of the Turtle
-	-- Mage
-	[GetSpellInfo(45438)] = 2, -- Ice Block
-	[GetSpellInfo(113862)] = 2, -- Greater Invisibility
-	[GetSpellInfo(198111)] = 2, -- Temporal Shield
-	[GetSpellInfo(198065)] = 2, -- Prismatic Cloak
-	[GetSpellInfo(11426)] = 2, -- Ice Barrier
-	-- Monk
-	[GetSpellInfo(201318)] = 2, -- Fortifying Elixir
-	[GetSpellInfo(120954)] = 2, -- Fortifying Brew
-	[GetSpellInfo(116849)] = 2, -- Life Cocoon
-	[GetSpellInfo(202162)] = 2, -- Guard
-	[GetSpellInfo(215479)] = 2, -- Ironskin Brew
-	[GetSpellInfo(209584)] = 2, -- Zen Focus Tea
-	-- Paladin
-	[GetSpellInfo(642)] = 2, -- Divine Shield
-	[GetSpellInfo(498)] = 2, -- Divine Protection
-	[GetSpellInfo(1022)] = 2, -- Blessing of Protection
-	[GetSpellInfo(6940)] = 2, -- Blessing of Sacrifice
-	[GetSpellInfo(204018)] = 2, -- Blessing of Spellwarding
-	[GetSpellInfo(199507)] = 2, -- Spreading The Word: Protection
-	[GetSpellInfo(216857)] = 2, -- Guarded by the Light
-	[GetSpellInfo(228049)] = 2, -- Guardian of the Forgotten Queen
-	[GetSpellInfo(31850)] = 2, -- Ardent Defender
-	[GetSpellInfo(86659)] = 2, -- Guardian of Ancient Kings
-	[GetSpellInfo(209388)] = 2, -- Bulwark of Order
-	[GetSpellInfo(1044)] = 2, -- Blessing of Freedom
-	[GetSpellInfo(210256)] = 2, -- Blessing of Sanctuary
-	[GetSpellInfo(31821)] = 2, -- Aura Mastery
-	-- Priest
-	[GetSpellInfo(81782)] = 2, -- Power Word: Barrier
-	[GetSpellInfo(47585)] = 2, -- Dispersion
-	[GetSpellInfo(27827)] = 2, -- Spirit of Redemption
-	[GetSpellInfo(47788)] = 2, -- Guardian Spirit
-	[GetSpellInfo(33206)] = 2, -- Pain Suppression
-	[GetSpellInfo(200183)] = 2, -- Apotheosis
-	[GetSpellInfo(10060)] = 2, -- Power Infusion
-	[GetSpellInfo(47536)] = 2, -- Rapture
-	[GetSpellInfo(215769)] = 2, -- Spirit of Redemption
-	-- Rogue
-	[GetSpellInfo(5277)] = 2, -- Evasion
-	[GetSpellInfo(31224)] = 2, -- Cloak of Shadows
-	[GetSpellInfo(45182)] = 2, -- Cheating Death
-	-- Shaman
-	[GetSpellInfo(204293)] = 2, -- Spirit Link
-	[GetSpellInfo(108271)] = 2, -- Astral Shift
-	[GetSpellInfo(98007)] = 2, -- Spirit Link Totem
-	[GetSpellInfo(114052)] = 2, -- Ascendance (Resto)
-	[GetSpellInfo(108281)] = 2, -- Ancestral Guidance
-	-- Warlock
-	[GetSpellInfo(108416)] = 2, -- Dark Pact
-	[GetSpellInfo(104773)] = 2, -- Unending Resolve
-	[GetSpellInfo(221715)] = 2, -- Essence Drain
-	[GetSpellInfo(212295)] = 2, -- Nether Ward
-	[GetSpellInfo(212284)] = 2, -- Firestone
-	[GetSpellInfo(196098)] = 2, -- Soul Harvest
-	[GetSpellInfo(212295)] = 2, -- Planeswalker
-	-- Warrior
-	[GetSpellInfo(118038)] = 2, -- Die by the Sword
-	[GetSpellInfo(184364)] = 2, -- Enraged Regeneration
-	[GetSpellInfo(209484)] = 2, -- Tactical Advance
-	[GetSpellInfo(97463)] = 2, -- Commanding Shout
-	[GetSpellInfo(213915)] = 2, -- Mass Spell Reflection
-	[GetSpellInfo(199038)] = 2, -- Leave No Man Behind
-	[GetSpellInfo(223658)] = 2, -- Safeguard
-	[GetSpellInfo(147833)] = 2, -- Intervene
-	[GetSpellInfo(198760)] = 2, -- Intercept
-	[GetSpellInfo(12975)] = 2, -- Last Stand
-	[GetSpellInfo(871)] = 2, -- Shield Wall
-	[GetSpellInfo(23920)] = 2, -- Spell Reflection
-	[GetSpellInfo(216890)] = 2, -- Spell Reflection (PvPT)
-	[GetSpellInfo(190456)] = 2, -- Ignore Pain
-	[GetSpellInfo(132404)] = 2, -- Shield Block
-	[GetSpellInfo(199261)] = 2, -- Death Wish
-	-- Consumables
-	[GetSpellInfo(188029)] = 2, -- Unbending Potion (Legion Armor)
-	[GetSpellInfo(188028)] = 2, -- Potion of the Old War (Legion Melee)
-	[GetSpellInfo(188027)] = 2, -- Potion of Deadly Grace (Legion Caster)
-	[GetSpellInfo(229206)] = 2, -- Potion of Prolonged Power (Legion)
-	[GetSpellInfo(192001)] = 5, -- Drink
-	[GetSpellInfo(192002)] = 5, -- Drink 2
-	[GetSpellInfo(167152)] = 5, -- Refreshment
-	[GetSpellInfo(192126)] = 5, -- Food
-	[GetSpellInfo(80167)] = 5, -- Food 2
-	
+
 -- Dungeon
 	-- Mythic+ Affixes
-	[GetSpellInfo(221772)] = 5,	-- Overflowing
-	[GetSpellInfo(209858)] = 5,	-- Necrotic
+	[GetSpellInfo(209858)] = 2,	-- Necrotic
 	[GetSpellInfo(226512)] = 5,	-- Sanguine
+	[GetSpellInfo(240559)] = 4,	-- Grievous Wound
 	-- Black Rook Hold
 	-- Trash Mobs
 	[GetSpellInfo(194969)] = 3,	-- Soul Echoes
@@ -349,6 +240,7 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 	[GetSpellInfo(211464)] = 3,	-- Fel Detonation
 	[GetSpellInfo(207980)] = 3,	-- Disintegration Beam
 	[GetSpellInfo(207979)] = 3,	-- Shockwave
+	[GetSpellInfo(209027)] = 3,	-- Quelling Strike
 	-- Advisor Melandrus
 	[GetSpellInfo(209602)] = 3,	-- Blade Surge
 	[GetSpellInfo(224333)] = 4,	-- Enveloping Winds
@@ -359,6 +251,7 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 	[GetSpellInfo(200631)] = 4,	-- Unnerving Screech
 	[GetSpellInfo(201400)] = 3,	-- Dread Inferno
 	[GetSpellInfo(201361)] = 4,	-- Darksoul Bite
+	[GetSpellInfo(200769)] = 4,	-- Propelling Charge
 	-- Archdruid Glaidalis
 	[GetSpellInfo(198408)] = 4,	-- Nightfall
 	[GetSpellInfo(196376)] = 3,	-- Grievous Tear
@@ -372,6 +265,8 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 	[GetSpellInfo(195561)] = 3,	-- Blinding Peck
 	-- Warlord Parjesh
 	[GetSpellInfo(192094)] = 3,	-- Impaling Spear
+	-- Lady Hatecoil
+	[GetSpellInfo(193597)] = 3,	-- Static Nova
 	-- Serpentrix
 	[GetSpellInfo(191855)] = 3,	-- Toxic Wound
 	[GetSpellInfo(191858)] = 4,	-- Toxic Puddle
@@ -383,7 +278,7 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 	[GetSpellInfo(199805)] = 3,	-- Crackle
 	[GetSpellInfo(199050)] = 3,	-- Mortal Hew
 	[GetSpellInfo(199341)] = 3,	-- Bear Trap
-	[GetSpellInfo(196194)] = 3,	-- Raven's Dive
+	[GetSpellInfo(196194)] = 3,	-- Crunch Armor
 	[GetSpellInfo(199674)] = 3,	-- Wicked Dagger
 	-- Hymdall
 	[GetSpellInfo(193092)] = 3,	-- Bloodletting Sweep
@@ -408,6 +303,8 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 	[GetSpellInfo(194235)] = 4,	-- Nether Rip
 	-- Helya
 	[GetSpellInfo(185539)] = 3,	-- Rapid Rupture
+	[GetSpellInfo(195309)] = 3,	-- Swirling Water
+	[GetSpellInfo(197264)] = 3,	-- Taint of the Sea
 	-- Neltharion's Lair
 	-- Trash Mobs
 	[GetSpellInfo(226296)] = 3,	-- Piercing Shards
@@ -427,10 +324,10 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 	[GetSpellInfo(210688)] = 3,	-- Collapsing Rift
 	[GetSpellInfo(226269)] = 3,	-- Torment
 	[GetSpellInfo(211756)] = 3,	-- Searing Wound
-	[GetSpellInfo(211217)] = 3,	-- Arcane Slicer
 	[GetSpellInfo(211543)] = 3,	-- Devour
 	-- Corstilax
 	[GetSpellInfo(195791)] = 3,	-- Quarantine
+	[GetSpellInfo(196074)] = 3,	-- Suppression Protocol
 	-- Ivanyr
 	[GetSpellInfo(196804)] = 3,	-- Nether Link
 	[GetSpellInfo(196562)] = 3,	-- Volatile Magic
@@ -486,10 +383,11 @@ TukuiUnitFrames.RaidDebuffsTracking = {
 
 TukuiUnitFrames.RaidBuffsTracking = {
 	PRIEST = {
-		{194384, "TOPLEFT", {1, 0, 0.75}},               -- Atonement
-		{41635, "BOTTOMLEFT", {0.2, 0.7, 0.2}},          -- Prayer of Mending
-		{139, "BOTTOMRIGHT", {0.4, 0.7, 0.2}},             -- Renew
-		{17, "TOPRIGHT", {0.81, 0.85, 0.1}, true},         -- Power Word: Shield
+		{194384, "TOPRIGHT", {1, 0, 0.75}},               -- Atonement
+		{41635, "BOTTOMRIGHT", {0.2, 0.7, 0.2}},          -- Prayer of Mending
+		{139, "BOTTOMLEFT", {0.4, 0.7, 0.2}},             -- Renew
+		{17, "TOPLEFT", {0.81, 0.85, 0.1}, true},         -- Power Word: Shield
+		{208065, "TOPLEFT", {0.2, 0.2, 0.7}, true},     -- Light of T'uure
 		{47788, "LEFT", {221/255, 117/255, 0}, true},     -- Guardian Spirit
 		{33206, "LEFT", {227/255, 23/255, 13/255}, true}, -- Pain Suppression
 	},
@@ -509,13 +407,12 @@ TukuiUnitFrames.RaidBuffsTracking = {
 		{1022, "BOTTOMRIGHT", {0.2, 0.2, 1}, true},    -- Hand of Protection
 		{1044, "BOTTOMRIGHT", {0.89, 0.45, 0}, true},  -- Hand of Freedom
 		{6940, "BOTTOMRIGHT", {0.89, 0.1, 0.1}, true}, -- Hand of Sacrifice
-		{114163, 'BOTTOMLEFT', {0.87, 0.7, 0.03}},     -- Eternal Flame
 	},
 	SHAMAN = {
 		{61295, "TOPRIGHT", {0.7, 0.3, 0.7}},    -- Riptide
 	},
 	MONK = {
-		{119611, "TOPLEFT", {0.8, 0.4, 0.8}},    --Renewing Mist
+		{119611, "TOPLEFT", {0.8, 0.4, 0.8}},    -- Renewing Mist
 		{116849, "TOPRIGHT", {0.2, 0.8, 0.2}},   -- Life Cocoon
 		{124682, "BOTTOMLEFT", {0.4, 0.8, 0.2}}, -- Enveloping Mist
 		{124081, "BOTTOMRIGHT", {0.7, 0.4, 0}},  -- Zen Sphere
@@ -527,13 +424,4 @@ TukuiUnitFrames.RaidBuffsTracking = {
 		{114030, "TOPLEFT", {0.2, 0.2, 1}},            -- Vigilance
 		{3411, "TOPRIGHT", {227/255, 23/255, 13/255}}, -- Intervene
 	},
-	PET = {
-		{19615, 'TOPLEFT', {227/255, 23/255, 13/255}, true}, -- Frenzy
-		{136, 'TOPRIGHT', {0.2, 0.8, 0.2}, true}             -- Mend Pet
-	},
-	HUNTER = {},
-	DEMONHUNTER = {},
-	WARLOCK = {},
-	MAGE = {},
-	DEATHKNIGHT = {},
 }
