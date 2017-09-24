@@ -390,6 +390,7 @@ TukuiUnitFrames.RaidBuffsTracking = {
 		{208065, "TOPLEFT", {0.2, 0.2, 0.7}, true},     -- Light of T'uure
 		{47788, "LEFT", {221/255, 117/255, 0}, true},     -- Guardian Spirit
 		{33206, "LEFT", {227/255, 23/255, 13/255}, true}, -- Pain Suppression
+		{242622, "LEFT", {255/255, 0/255, 0/255}, true}, -- Guiding Hand (Trinket)
 	},
 	DRUID = {
 		{774, "TOPRIGHT", {0.8, 0.4, 0.8}},      -- Rejuvenation
