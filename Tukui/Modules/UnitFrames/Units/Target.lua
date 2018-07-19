@@ -17,17 +17,9 @@ function TukuiUnitFrames:Target()
 	self:SetBackdropColor(0, 0, 0)
 	self:CreateShadow()
 
-	local Panel = CreateFrame("Frame", nil, self)
-	Panel:SetFrameStrata(self:GetFrameStrata())
-	Panel:SetTemplate()
-	Panel:Size(250, 21)
-	Panel:Point("BOTTOM", self, "BOTTOM", 0, 0)
-	Panel:SetFrameLevel(3)
-	Panel:SetBackdropBorderColor(0, 0, 0, 0)
-
 	local Health = CreateFrame("StatusBar", nil, self)
 	Health:SetFrameStrata(self:GetFrameStrata())
-	Health:Height(26)
+	Health:Height(25)
 	Health:SetPoint("TOPLEFT")
 	Health:SetPoint("TOPRIGHT")
 	Health:SetStatusBarTexture(HealthTexture)
@@ -38,7 +30,7 @@ function TukuiUnitFrames:Target()
 
 	Health.Value = Health:CreateFontString(nil, "OVERLAY")
 	Health.Value:SetFontObject(Font)
-	Health.Value:Point("RIGHT", Panel, "RIGHT", -4, 0)
+	Health.Value:Point("RIGHT", Health, "RIGHT", -4, 0)
 
 	Health.frequentUpdates = true
 	Health.colorTapping = true
@@ -55,7 +47,7 @@ function TukuiUnitFrames:Target()
 
 	local Power = CreateFrame("StatusBar", nil, self)
 	Power:SetFrameStrata(self:GetFrameStrata())
-	Power:Height(8)
+	Power:Height(10)
 	Power:Point("TOPLEFT", Health, "BOTTOMLEFT", 0, -1)
 	Power:Point("TOPRIGHT", Health, "BOTTOMRIGHT", 0, -1)
 	Power:SetStatusBarTexture(PowerTexture)
@@ -67,7 +59,7 @@ function TukuiUnitFrames:Target()
 
 	Power.Value = Power:CreateFontString(nil, "OVERLAY")
 	Power.Value:SetFontObject(Font)
-	Power.Value:Point("LEFT", Panel, "LEFT", 4, 0)
+	Power.Value:Point("LEFT", Power, "LEFT", 4, 0)
 
 	Power.frequentUpdates = true
 	Power.colorPower = true
@@ -124,8 +116,8 @@ function TukuiUnitFrames:Target()
 		self.Portrait = Portrait
 	end
 
-	local Name = Panel:CreateFontString(nil, "OVERLAY")
-	Name:Point("LEFT", Panel, "LEFT", 4, 0)
+	local Name = Health:CreateFontString(nil, "OVERLAY")
+	Name:Point("LEFT", Health, "LEFT", 4, 0)
 	Name:SetJustifyH("LEFT")
 	Name:SetFontObject(Font)
 
@@ -315,7 +307,6 @@ function TukuiUnitFrames:Target()
 
 	self:Tag(Name, "[Tukui:GetNameColor][Tukui:NameLong] [Tukui:DiffColor][level] [shortclassification]")
 	self.Name = Name
-	self.Panel = Panel
 	self.Health = Health
 	self.Health.bg = Health.Background
 	self.Power = Power

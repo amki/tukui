@@ -46,7 +46,7 @@ function Panels:Enable()
 
 	BottomLine:SetAlpha(0)
 
-	local LeftChatBG = CreateFrame("Frame", nil, DataTextLeft)
+	--[[local LeftChatBG = CreateFrame("Frame", nil, DataTextLeft)
 	LeftChatBG:Size(370 + 12, 177)
 	LeftChatBG:Point("BOTTOM", DataTextLeft, "BOTTOM", 0, -6)
 	LeftChatBG:SetFrameLevel(1)
@@ -77,7 +77,7 @@ function Panels:Enable()
 	self.LeftChatBG = LeftChatBG
 	self.RightChatBG = RightChatBG
 	self.TabsBGLeft = TabsBGLeft
-	self.TabsBGRight = TabsBGRight
+	self.TabsBGRight = TabsBGRight --]]
 
 	local PetBattleHider = CreateFrame("Frame", nil, UIParent, "SecureHandlerStateTemplate")
 	PetBattleHider:SetAllPoints()

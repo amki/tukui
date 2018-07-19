@@ -17,18 +17,10 @@ function TukuiUnitFrames:Player()
 	self:SetBackdropColor(0, 0, 0)
 	self:CreateShadow()
 
-	local Panel = CreateFrame("Frame", nil, self)
-	Panel:SetFrameStrata(self:GetFrameStrata())
-	Panel:SetFrameLevel(3)
-	Panel:SetTemplate()
-	Panel:Size(250, 21)
-	Panel:Point("BOTTOM", self, "BOTTOM", 0, 0)
-	Panel:SetBackdropBorderColor(0, 0, 0, 0)
-
 	local Health = CreateFrame("StatusBar", nil, self)
 	Health:SetFrameStrata(self:GetFrameStrata())
 	Health:SetFrameLevel(4)
-	Health:Height(26)
+	Health:Height(25)
 	Health:SetPoint("TOPLEFT")
 	Health:SetPoint("TOPRIGHT")
 	Health:SetStatusBarTexture(HealthTexture)
@@ -39,7 +31,7 @@ function TukuiUnitFrames:Player()
 
 	Health.Value = Health:CreateFontString(nil, "OVERLAY")
 	Health.Value:SetFontObject(Font)
-	Health.Value:Point("RIGHT", Panel, "RIGHT", -4, 0)
+	Health.Value:Point("RIGHT", Health, "RIGHT", -4, 0)
 	
 	Health.colorTapping = true
 	Health.colorDisconnected = true
@@ -57,7 +49,7 @@ function TukuiUnitFrames:Player()
 	local Power = CreateFrame("StatusBar", nil, self)
 	Power:SetFrameStrata(self:GetFrameStrata())
 	Power:SetFrameLevel(4)
-	Power:Height(8)
+	Power:Height(10)
 	Power:Point("TOPLEFT", Health, "BOTTOMLEFT", 0, -1)
 	Power:Point("TOPRIGHT", Health, "BOTTOMRIGHT", 0, -1)
 	Power:SetStatusBarTexture(PowerTexture)
@@ -69,7 +61,7 @@ function TukuiUnitFrames:Player()
 
 	Power.Value = Power:CreateFontString(nil, "OVERLAY")
 	Power.Value:SetFontObject(Font)
-	Power.Value:Point("LEFT", Panel, "LEFT", 4, 0)
+	Power.Value:Point("LEFT", Power, "LEFT", 4, 0)
 
 	Power.frequentUpdates = true
 	Power.colorPower = true
@@ -140,9 +132,9 @@ function TukuiUnitFrames:Player()
 	Combat:Point("LEFT", 0, 1)
 	Combat:SetVertexColor(0.69, 0.31, 0.31)
 
-	local Status = Panel:CreateFontString(nil, "OVERLAY", 1)
+	local Status = Health:CreateFontString(nil, "OVERLAY", 1)
 	Status:SetFontObject(Font)
-	Status:Point("CENTER", Panel, "CENTER", 0, 0)
+	Status:Point("CENTER", Health, "CENTER", 0, 0)
 	Status:SetTextColor(0.69, 0.31, 0.31)
 	Status:Hide()
 
@@ -348,7 +340,6 @@ function TukuiUnitFrames:Player()
 	self:HookScript("OnLeave", TukuiUnitFrames.MouseOnPlayer)
 
 	-- Register with oUF
-	self.Panel = Panel
 	self.Health = Health
 	self.Health.bg = Health.Background
 	self.Power = Power

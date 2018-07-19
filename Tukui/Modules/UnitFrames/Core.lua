@@ -279,11 +279,11 @@ end
 function TukuiUnitFrames:UpdateNamePosition()
 	if (self.Power.Value:GetText() and UnitIsEnemy("player", "target")) then
 		self.Name:ClearAllPoints()
-		self.Name:SetPoint("CENTER", self.Panel, "CENTER", 0, 0)
+		self.Name:SetPoint("CENTER", self.Health, "CENTER", 0, 0)
 	else
 		self.Name:ClearAllPoints()
 		self.Power.Value:SetAlpha(0)
-		self.Name:SetPoint("LEFT", self.Panel, "LEFT", 4, 0)
+		self.Name:SetPoint("LEFT", self.Health, "LEFT", 4, 0)
 	end
 end
 
@@ -771,21 +771,21 @@ function TukuiUnitFrames:GetRaidFramesAttributes()
 			self:SetWidth(header:GetAttribute("initial-width"))
 			self:SetHeight(header:GetAttribute("initial-height"))
 		]],
-		"initial-width", T.Scale(66),
+		"initial-width", T.Scale(100),
 		"initial-height", T.Scale(50),
 		"showParty", true,
 		"showRaid", true,
 		"showPlayer", true,
 		"showSolo", false,
 		"xoffset", T.Scale(4),
-		"yOffset", T.Scale(-4),
+		"yOffset", T.Scale(-28),
 		"point", "TOP",
 		"groupFilter", "1,2,3,4,5,6,7,8",
 		"groupingOrder", "1,2,3,4,5,6,7,8",
 		"groupBy", C["Raid"].GroupBy.Value,
 		"maxColumns", math.ceil(40 / 5),
 		"unitsPerColumn", C["Raid"].MaxUnitPerColumn,
-		"columnSpacing", T.Scale(4),
+		"columnSpacing", T.Scale(2),
 		"columnAnchorPoint", "LEFT"
 end
 
@@ -928,12 +928,12 @@ function TukuiUnitFrames:CreateUnits()
 		local Player = oUF:Spawn("player")
 		Player:SetPoint("BOTTOMLEFT", TukuiUnitFrames.Anchor, "TOPLEFT", 0, 8)
 		Player:SetParent(Panels.PetBattleHider)
-		Player:Size(250, 57)
+		Player:Size(200, 35)
 
 		local Target = oUF:Spawn("target")
 		Target:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 8)
 		Target:SetParent(Panels.PetBattleHider)
-		Target:Size(250, 57)
+		Target:Size(200, 35)
 
 		local TargetOfTarget = oUF:Spawn("targettarget")
 		TargetOfTarget:SetPoint("BOTTOM", TukuiUnitFrames.Anchor, "TOP", 0, 8)

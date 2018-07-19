@@ -19,7 +19,7 @@ function TukuiUnitFrames:Raid()
 	local Health = CreateFrame("StatusBar", nil, self)
 	Health:SetPoint("TOPLEFT")
 	Health:SetPoint("TOPRIGHT")
-	Health:Height(28)
+	Health:Height(40)
 	Health:SetStatusBarTexture(HealthTexture)
 
 	if C.Raid.VerticalHealth then
@@ -29,11 +29,15 @@ function TukuiUnitFrames:Raid()
 	Health.Background = Health:CreateTexture(nil, "BORDER")
 	Health.Background:SetAllPoints()
 	Health.Background:SetColorTexture(.1, .1, .1)
+	
+	local Name = Health:CreateFontString(nil, "OVERLAY", 1)
+	Name:SetPoint("LEFT", Health, 10, 0)
+	Name:SetFontObject(Font)
 
 	if C.Raid.ShowHealthText then
 		Health.Value = Health:CreateFontString(nil, "OVERLAY", 1)
 		Health.Value:SetFontObject(HealthFont)
-		Health.Value:Point("CENTER", Health, 0, 0)
+		Health.Value:Point("RIGHT", Health, -5, 0)
 
 		Health.PostUpdate = TukuiUnitFrames.PostUpdateHealth
 	end
@@ -53,7 +57,7 @@ function TukuiUnitFrames:Raid()
 
 	-- Power
 	local Power = CreateFrame("StatusBar", nil, self)
-	Power:Height(3)
+	Power:Height(10)
 	Power:Point("TOPLEFT", Health, "BOTTOMLEFT", 0, -1)
 	Power:Point("TOPRIGHT", Health, "BOTTOMRIGHT", 0, -1)
 
@@ -70,17 +74,6 @@ function TukuiUnitFrames:Raid()
 	if (C.UnitFrames.Smooth) then
 		Health.Smooth = true
 	end
-
-	local Panel = CreateFrame("Frame", nil, self)
-	Panel:Point("TOPLEFT", Power, "BOTTOMLEFT", 0, -1)
-	Panel:Point("TOPRIGHT", Power, "BOTTOMRIGHT", 0, -1)
-	Panel:SetPoint("BOTTOM", 0, 0)
-	Panel:SetTemplate()
-	Panel:SetBackdropBorderColor(C["General"].BorderColor[1] * 0.7, C["General"].BorderColor[2] * 0.7, C["General"].BorderColor[3] * 0.7)
-
-	local Name = Panel:CreateFontString(nil, "OVERLAY", 1)
-	Name:SetPoint("CENTER")
-	Name:SetFontObject(Font)
 
 	local ReadyCheck = Power:CreateTexture(nil, "OVERLAY", 2)
 	ReadyCheck:Height(12)
@@ -104,6 +97,22 @@ function TukuiUnitFrames:Raid()
 		insideAlpha = 1,
 		outsideAlpha = C["Raid"].RangeAlpha,
 	}
+	
+	local Debuffs = CreateFrame("Frame", self:GetName()..'Debuffs', self)
+	Debuffs:SetFrameStrata(self:GetFrameStrata())
+	Debuffs:SetHeight(26)
+	Debuffs:SetWidth(100)
+	Debuffs:SetPoint("TOPLEFT", Power, "BOTTOMLEFT", 0, -4)
+	Debuffs.size = 20
+	Debuffs.num = 5
+	Debuffs.numRow = 1
+
+	Debuffs.spacing = 2
+	Debuffs.initialAnchor = "TOPLEFT"
+	Debuffs["growth-y"] = "DOWN"
+	Debuffs["growth-x"] = "RIGHT"
+	Debuffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura
+	Debuffs.PostUpdateIcon = TukuiUnitFrames.PostUpdateAura
 
 	if (C.Raid.HealBar) then
 		local FirstBar = CreateFrame("StatusBar", nil, Health)
@@ -218,7 +227,7 @@ function TukuiUnitFrames:Raid()
 	self.Health.bg = Health.Background
 	self.Power = Power
 	self.Power.bg = Power.Background
-	self.Panel = Panel
+	self.Debuffs = Debuffs
 	self.Name = Name
 	self.ReadyCheckIndicator = ReadyCheck
 	self.Range = Range
