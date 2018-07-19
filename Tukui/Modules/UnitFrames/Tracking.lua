@@ -390,7 +390,7 @@ TukuiUnitFrames.RaidBuffsTracking = {
 		{208065, "TOPLEFT", {0.2, 0.2, 0.7}, true},     -- Light of T'uure
 		{47788, "LEFT", {221/255, 117/255, 0}, true},     -- Guardian Spirit
 		{33206, "LEFT", {227/255, 23/255, 13/255}, true}, -- Pain Suppression
-		{242622, "LEFT", {255/255, 0/255, 0/255}, true}, -- Guiding Hand (Trinket)
+		{242622, "LEFT", {255/255, 0/255, 0/255}}, -- Guiding Hand (Trinket)
 	},
 	DRUID = {
 		{774, "TOPRIGHT", {0.8, 0.4, 0.8}},      -- Rejuvenation
@@ -405,6 +405,7 @@ TukuiUnitFrames.RaidBuffsTracking = {
 	PALADIN = {
 		{53563, "TOPRIGHT", {0.7, 0.3, 0.7}},          -- Beacon of Light
 		{156910, "TOPRIGHT", {0.7, 0.3, 0.7}},         -- Beacon of Faith
+		{200025, "TOPRIGHT", {0.7, 0.3, 0.7}},         -- Beacon of Virtue
 		{1022, "BOTTOMRIGHT", {0.2, 0.2, 1}, true},    -- Hand of Protection
 		{1044, "BOTTOMRIGHT", {0.89, 0.45, 0}, true},  -- Hand of Freedom
 		{6940, "BOTTOMRIGHT", {0.89, 0.1, 0.1}, true}, -- Hand of Sacrifice
