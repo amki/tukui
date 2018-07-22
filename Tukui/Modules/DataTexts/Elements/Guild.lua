@@ -76,14 +76,7 @@ local function whisperClick(self,arg1,arg2,checked)
 end
 
 local function ToggleGuildFrame()
-	if IsInGuild() then
-		if not GuildFrame then LoadAddOn("Blizzard_GuildUI") end
-		GuildFrame_Toggle()
-		GuildFrame_TabClicked(GuildFrameTab2)
-	else
-		if not LookingForGuildFrame then LoadAddOn("Blizzard_LookingForGuildUI") end
-		LookingForGuildFrame_Toggle()
-	end
+	 ToggleCommunitiesFrame()
 end
 
 local OnMouseUp = function(self, btn)
