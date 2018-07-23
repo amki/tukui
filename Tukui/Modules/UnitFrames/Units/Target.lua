@@ -246,9 +246,10 @@ function TukuiUnitFrames:Target()
 		Buffs.numRow = 3
 
 		Debuffs:SetFrameStrata(self:GetFrameStrata())
+		Debuffs:Point("TOPLEFT", self, "BOTTOMLEFT", 0, -4)
+		
 		Debuffs:SetHeight(26)
 		Debuffs:SetWidth(252)
-		Debuffs:SetPoint("TOPLEFT", self, "BOTTOMLEFT", 0, -4)
 		Debuffs.size = 26
 		Debuffs.num = 36
 		Debuffs.numRow = 3
@@ -261,7 +262,7 @@ function TukuiUnitFrames:Target()
 		Buffs.onlyShowPlayer = C.UnitFrames.OnlySelfBuffs
 
 		Debuffs.spacing = 2
-		Debuffs.initialAnchor = "TOPLEFT"
+		Debuffs.initialAnchor = "BOTTOMLEFT"
 		Debuffs["growth-y"] = "DOWN"
 		Debuffs["growth-x"] = "RIGHT"
 		Debuffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura

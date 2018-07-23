@@ -237,8 +237,8 @@ function TukuiUnitFrames:UpdateDebuffsHeaderPosition()
 		Addition = 0
 	end
 
-	Debuffs:ClearAllPoints()
-	Debuffs:SetPoint("BOTTOMLEFT", self, "BOTTOMLEFT", -2, Y + Addition)
+	--Debuffs:ClearAllPoints()
+	--Debuffs:SetPoint("BOTTOMLEFT", self, "BOTTOMLEFT", -2, Y + Addition)
 end
 
 function TukuiUnitFrames:CustomCastTimeText(duration)
